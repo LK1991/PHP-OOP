@@ -35,3 +35,19 @@
 	$cat1->lastname = "K";
 
 	print "The cat's name is {$cat1->getName()}.";
+
+	class House {
+		public $color = "default color";
+		public $price = 0;
+
+		function getColor() {
+			return "{$this->color}";
+			"{$this->price}";
+		}
+	}
+
+	$house1 = new House();
+	$house1->color = "white";
+	$house1->price = "400,000";
+
+	print "The house is {$house1->getColor()}";
