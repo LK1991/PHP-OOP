@@ -18,9 +18,11 @@
 
 	print "The person's name is {$person1->getName()}.";
 
+	echo "<br>____________________________________________________________________<br>" . "<br>";
+
 	class Cat {
-		public $firstname = "default name";
-		public $lastname = "default last name";
+		public $firstname = "Man";
+		public $lastname = " Kitty";
 		public $gender = "male";
 		public $price = 0;
 
@@ -36,13 +38,14 @@
 
 	print "The cat's name is {$cat1->getName()}.";
 
+	echo "<br>____________________________________________________________________<br>" . "<br>";
+
 	class House {
-		public $color = "default color";
+		public $color = "yellow";
 		public $price = 0;
 
 		function getColor() {
-			return "{$this->color}".
-			"{$this->price}";
+			return "{$this->color}";
 		}
 	}
 
@@ -52,17 +55,15 @@
 
 	print "The house is {$house1->getColor()}";
 
-	// _____________________________________________________________________________________
+	echo "<br>____________________________________________________________________<br>" . "<br>";
 
-	// Lecture 2 Examples
-
-	class Person {
+	class Human {
 		public $firstname;
 		public $lastname;
 		public $age;
 		public $gender;
 
-		function __construct($title, $firstname, $lastname, $age, $gender) {
+		function __construct( $firstname, $lastname, $age, $gender) {
 			$this->firstname = $firstname;
 			$this->lastname = $lastname;
 			$this->age = $age;
@@ -75,15 +76,17 @@
 		}
 	}
 
-	$person1 = new Person("Lianna", "K", "15", "female");
-	print "Person 1 : {$person1->getName()}";
+	$human1 = new Human("Lianna", " K", "15", "female");
+	print "Human 1 : {$human1->getName()}";
 
-	class Cat {
+	echo "<br>____________________________________________________________________<br>" . "<br>";
+
+	class Catt {
 		public $firstname;
 		public $lastname;
 		public $gender;
 
-		function __construct($title, $firstname, $lastname, $gender) {
+		function __construct( $firstname, $lastname, $gender) {
 			$this->firstname = $firstname;
 			$this->lastname = $lastname;
 			$this->gender = $gender;
@@ -93,24 +96,26 @@
 			return "{$this->firstname}".
 			"{$this->lastname}";
 		}
+}
+	$cat1 = new Cat("Benji", "K", "male");
+	print "Cat 1 : {$cat1->getname()}";
 
-		$cat1 = new Cat("Benji", "K", "male");
-		print "Cat 1 : {$cat1->getname()}";
+	echo "<br>____________________________________________________________________<br>" . "<br>";
 	
-	class House {
+	class Housee {
 		public $color;
 		public $price;
 
-		function __construct($title, $color, $price) {
+		function __construct($color, $price) {
 			$this->color = $color;
 			$this->price = $price;
 		}
 
 		function getColor() {
-			return "{$this->color}".
-			"{$this->price}";
+			return $this->color;
 		}
 	}
 
-	$house1 = new House("white", "400,000");
+	$house1 = new House("white", true);
 	print "House 1 : {$house1->getColor()}";
+
