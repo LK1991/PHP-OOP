@@ -98,41 +98,45 @@ class SuperHero {
 	public $marvelHeroName2;
 	public $movie1;
 	public $movie2;
+	public $power2;
 
-	function __construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2) {
+	function __construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2, $power2) {
 		$this->marvelHeroName1 = $marvelHeroName1;
 		$this->marvelHeroName2 = $marvelHeroName2;
 		$this->movie1 = $movie1;
 		$this->movie2 = $movie2;
+		$this->power2 = $power2;
 	}
 
 	function getName() {
-		return "Superhero 1 is the " . $this->marvelHeroName1 . ", he's from the movie" . $this->movie1 . "and his power is having " . 
-		$this->power1 . "in his hands and body" .
-		" and Superhero 2 is " . $this->marvelHeroName2 . ", he's from the movie" . $this->movie2 . "and his power is using a " . 
-		$this->power2 . " to fight his enemies";
+		return "Superhero 1 is the " . $this->marvelHeroName1 . ", he's from the movie" . $this->movie1 .  
+		"and his power is having " . $this->power1 . " and Superhero 2 is " . $this->marvelHeroName2 . 
+		", he's from the movie" . $this->movie2 . "and his power is using a " . $this->power2 . " to fight his enemy";
 	}
 }
 
-class Wolverine extends SuperHero {
-	function __construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2, $power1) {
-		parent::__construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2);
+class Wolverine extends SuperHero
+ {
+	function __construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2, $power2, $power1) {
+		parent::__construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2, $power2);
 		$this->power1 = $power1;
 	}
-	function greet() {
+	function getPower1()
+	 {
 		return $this->power1;
 	}
 }
 
 class Thor extends SuperHero {
 	function __construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2, $power2) {
-		parent::__construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2);
-		$this->power2 = $power2;
+		parent::__construct($marvelHeroName1, $marvelHeroName2, $movie1, $movie2, $power2);
 	}
 	function greet() {
 		return $this->power2;
 	}
 }
 
-$wolverine = new Wolverine("Wolverine", "Thor", " 'The Wolverine' ", " 'Thor' ", " adamantium ", " hammer");
-print $wolverine->getName();
+$wolverine1 = new Wolverine("Wolverine", "Thor", " 'The Wolverine' ", " 'Thor' ", "hammer", " adamantium");
+echo $wolverine1->getName() . "<br />";
+
+?>
