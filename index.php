@@ -1,5 +1,65 @@
 <?php
 
+	// LECTURE 1 
+	class Person {
+		public $firstname = "default name";
+		public $lastname = "default last name";
+		public $age = "age";
+		public $gender = "female";
+
+		function getName() {
+			return "{$this->firstname}";
+			"{$this->lastname}";
+		}
+	}
+	
+	$person1 = new Person();
+	$person1->firstname = "Lianna";
+	$person1->lastname = "K";
+
+	print "The person's name is {$person1->getName()}.";
+
+	echo "<br>____________________________________________________________________<br>" . "<br>";
+
+	class Cat {
+		public $firstname = "default name";
+		public $lastname = "default last name";
+		public $gender = "male";
+		public $price = 0;
+
+		function getName() {
+			return "{$this->firstname}";
+			"{$this->lastname}";
+		}
+	}
+
+	$cat1 = new Cat();
+	$cat1->firstname = "Benji";
+	$cat1->lastname = "K";
+
+	print "The cat's name is {$cat1->getName()}.";
+
+	echo "<br>____________________________________________________________________<br>" . "<br>";
+
+	class House {
+		public $color = "default color";
+		public $price = 0;
+
+		function getColor() {
+			return "{$this->color}";
+			"{$this->price}";
+		}
+	}
+	
+	$house1 = new House();
+	$house1->color = "white";
+	$house1->price = "400,000";
+
+	print "The house is {$house1->getColor()}";
+
+	echo "<br>____________________________________________________________________<br>" . "<br>";
+
+	// LECTURE 2
 	class Human {
 		public $firstname;
 		public $lastname;
@@ -24,7 +84,7 @@
 
 	echo "<br>____________________________________________________________________<br>" . "<br>";
 
-	class Cat {
+	class Catt {
 		public $firstname;
 		public $lastname;
 		public $gender;
@@ -45,7 +105,7 @@
 
 	echo "<br>____________________________________________________________________<br>" . "<br>";
 	
-	class House {
+	class Housee {
 		public $color;
 		public $price;
 
